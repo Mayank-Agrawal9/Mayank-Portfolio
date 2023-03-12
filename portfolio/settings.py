@@ -25,7 +25,7 @@ location = lambda x: os.path.join(os.path.realpath(BASE_DIR), x)
 SECRET_KEY = 'django-insecure--d+e)$t7w0$1&7%)w4=()a&cv-t4l0*8@=qu0@9l58gg4r7=x1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
