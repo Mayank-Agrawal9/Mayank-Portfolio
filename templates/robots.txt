@@ -6,4 +6,4 @@ Disallow: /slides/
 Disallow: /privacy-policy/
 Disallow: /tnc/
 
-Sitemap: https://portfolio-website-dcsc.onrender.com/sitemap.xml
+Sitemap: https://mayankportfolio.pythonanywhere.com/sitemap.xml
