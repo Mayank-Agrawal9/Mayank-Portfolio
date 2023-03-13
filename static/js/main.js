@@ -62,6 +62,11 @@
 	};
 	burgerMenu();
 
+$(".show-hide").on('click', function (event) {
+    $('#ftco-nav').removeClass('show');
+});
+
+
 
 	var onePageClick = function() {
 
