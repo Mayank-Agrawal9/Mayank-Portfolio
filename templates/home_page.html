@@ -1,13 +1,12 @@
 {% load static %}
 {% include 'include/base.html'%}
 {% block extra_css %}
-<title>{{home_page.meta_title}}</title>
 <meta name="description" content="{{ home_page.meta_description }}" />
 <meta name="keyword" content="{{ home_page.meta_keyword }}" />
 <meta property="og:title" content="{% if home_page.meta_title %}{{ home_page.meta_title }}{% endif %}" />
 <meta property="og:description" content="{% if home_page.meta_description %}{{ home_page.meta_description }}{% endif %}" />
 <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-<meta property="og:image" content="{{ request.build_absolute_uri }}/static/images/portfolio-og.png" />
+<meta property="og:image" content="{{ request.build_absolute_uri }}static/images/portfolio-og.png" />
 <meta property="og:image:width" content="1920" />
 <meta property="og:image:height" content="1080" />
 {% endblock %}
