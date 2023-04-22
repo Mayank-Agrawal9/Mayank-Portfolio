@@ -3,12 +3,20 @@
 {% block extra_css %}
 <meta name="description" content="{{ home_page.meta_description }}" />
 <meta name="keyword" content="{{ home_page.meta_keyword }}" />
+<link rel="canonical" href="https://mayankportfolio.pythonanywhere.com/" />
+<meta property="og:type" content="website">
 <meta property="og:title" content="{% if home_page.meta_title %}{{ home_page.meta_title }}{% endif %}" />
 <meta property="og:description" content="{% if home_page.meta_description %}{{ home_page.meta_description }}{% endif %}" />
 <meta property="og:url" content="{{ request.build_absolute_uri }}" />
 <meta property="og:image" content="{{ request.build_absolute_uri }}static/images/portfolio-og.png" />
 <meta property="og:image:width" content="1920" />
 <meta property="og:image:height" content="1080" />
+
+<!-- Twitter Card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ home_page.meta_title }}">
+<meta name="twitter:description" content="{{home_page.meta_description}}">
+<meta name="twitter:image" content="{{ request.build_absolute_uri }}static/images/portfolio-og.png">
 {% endblock %}
           {% block content %}
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -38,7 +46,7 @@
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url({{home_page.image_one.url}});">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url({{home_page.image_one.url}});" role="img" aria-label="Homepage image">
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -57,7 +65,7 @@
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url({{home_page.image_two.url}});">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url({{home_page.image_two.url}});" role="img" aria-label="Banner Image">
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -79,7 +87,7 @@
     			<div class="col-md-6 col-lg-5 d-flex">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
-	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url({{home_page.about_image.url}});">
+	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url({{home_page.about_image.url}});" role="img" aria-label="About Us Image">
 	    				</div>
     				</div>
     			</div>
@@ -189,7 +197,7 @@
 					<div class="col-md-4 text-center d-flex ftco-animate">
 						<a href="#" class="services-1">
 							<span class="icon">
-								<img src="{{service.icon.url}}"  style="height:60px; color:white;" alt="Service Icon">
+								<img src="{{service.icon.url}}"  style="color:white;" width="79" height="60" alt="Service Icon">
 <!--								<i class="flaticon-analysis"></i>-->
 							</span>
 							<div class="desc">
@@ -348,7 +356,7 @@
     		<div class="row">
     			<div class="col-md-6">
 					{% for project in projects %}
-    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{project.project_image.url}});">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url({{project.project_image.url}});" role="img" aria-label="Project Image">
     					<div class="overlay"></div>
 	    				<div class="text text-center">
 	    					<h3><a href="{{project.project_link}}">{{project.project_name}}</a></h3>
@@ -375,7 +383,7 @@
 			{% for blog in blog_details %}
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="{{blog.slug}}" class="block-20" style="background-image: url('{{blog.icon.url}}');">
+              <a href="{{blog.slug}}" class="block-20" style="background-image: url('{{blog.icon.url}}');" role="img" aria-label="Blog Image">
               </a>
               <div class="text mt-3 float-right d-block">
               	<div class="d-flex align-items-center mb-3 meta">
@@ -556,7 +564,7 @@
           </div>
 
           <div class="col-md-6 d-flex">
-          	<div class="img" style="background-image: url(/static/images/contact-us.avif);"></div>
+          	<div class="img" style="background-image: url(/static/images/contact-us.avif);" role="img" aria-label="contact us image"></div>
           </div>
         </div>
       </div>

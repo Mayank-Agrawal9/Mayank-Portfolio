@@ -129,7 +129,7 @@ yarn-error.log*
 *.sln
 *.sw?
 db.sqlite3
-
+portfolio/settings_local.py
 spaces/webpack-stats.json
 /public/static/
 /acgcc/whoosh_index/

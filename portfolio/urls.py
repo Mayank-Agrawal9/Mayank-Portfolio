@@ -31,9 +31,9 @@ urlpatterns = [
     path('404/', TemplateView.as_view(template_name='404.html')),
     path('thank-you', TemplateView.as_view(template_name='thank-you.html')),
     path('<slug:slug>/', BlogDetail.as_view(), name='blog_inner1'),
-    path('robots.txt/', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
-    path('robots.txt', RedirectView.as_view(url="/robots.txt"), name="robot"),
-    path('sitemap.xml/', TemplateView.as_view(template_name="sitemap.xml", content_type='text/plain')),
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
+    path('robots.txt/', RedirectView.as_view(url="/robots.txt"), name="robots"),
+    path('sitemap.xml/', TemplateView.as_view(template_name="sitemap.xml", content_type='text/xml')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

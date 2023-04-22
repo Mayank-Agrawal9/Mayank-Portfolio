@@ -1,9 +1,4 @@
-User-agent: *
-
+User-Agent: *
 Allow: /
-Disallow: /index/
-Disallow: /slides/
-Disallow: /privacy-policy/
-Disallow: /tnc/
 
 Sitemap: https://mayankportfolio.pythonanywhere.com/sitemap.xml
