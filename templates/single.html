@@ -4,12 +4,19 @@
 <title>{{object.title}}</title>
 <meta name="description" content="{{ object.meta_description }}" />
 <meta name="keyword" content="{{ object.meta_keyword }}" />
+<meta property="og:type" content="article">
 <meta property="og:title" content="{% if object.meta_title %}{{ object.meta_title }}{% endif %}" />
 <meta property="og:description" content="{% if object.meta_description %}{{ object.meta_description }}{% endif %}" />
 <meta property="og:url" content="{{ request.build_absolute_uri }}" />
 <meta property="og:image" content="http://{{ request.META.HTTP_HOST }}{{ object.banner_img.url }}" />
 <meta property="og:image:width" content="1920" />
 <meta property="og:image:height" content="1080" />
+
+<!-- Twitter Card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ object.meta_title }}">
+<meta name="twitter:description" content="{{object.meta_description}}">
+<meta name="twitter:image" content="http://{{ request.META.HTTP_HOST }}{{ object.banner_img.url }}">
         {% endblock %}
           {% block content %}
 
@@ -248,8 +255,8 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">{{home_page.address}}</span></li>
-	                <li><a href="{{home_page.phone}}"><span class="icon icon-phone"></span><span class="text">{{home_page.phone}}</span></a></li>
-	                <li><a href="{{home_page.email}}"><span class="icon icon-envelope"></span><span class="text">&nbsp;{{home_page.email}}</span></a></li>
+	                <li><a href="tel:{{home_page.phone}}"><span class="icon icon-phone"></span><span class="text">{{home_page.phone}}</span></a></li>
+	                <li><a href="mailto:{{home_page.email}}"><span class="icon icon-envelope"></span><span class="text">&nbsp;{{home_page.email}}</span></a></li>
 	              </ul>
 	            </div>
             </div>

@@ -5,40 +5,58 @@
     <head>
         <link rel="shortcut icon" type="img/png" href="{% static 'images/favicon-icon.png' %}"/>
         <meta charset="utf-8" />
-        <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T7GDZHP');</script>
-<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCZWJPZT7G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZCZWJPZT7G');
+</script>
         <title>
             {% block title %}
             {% if home_page.meta_title %}{{ home_page.meta_title }}{% else %}{{ home_page.meta_title }}{% endif %}
             {% endblock %}
         </title>
-        <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/personal.css' %}">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
     <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/animate.css'%}">
-
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
-
     <link rel="stylesheet" href="{% static 'css/aos.css'%}">
-
     <link rel="stylesheet" href="{% static 'css/ionicons.min.css'%}">
-
     <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css'%}">
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mayank Portfolio",
+  "alternateName": "Mayank Agrawal",
+  "url": "https://mayankportfolio.pythonanywhere.com",
+  "logo": "https://mayankportfolio.pythonanywhere.com/static/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "6260685116",
+    "contactType": "customer service",
+    "contactOption": "TollFree",
+    "areaServed": "IN",
+    "availableLanguage": ["en","Hindi"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=100021812174655",
+    "https://twitter.com/_Mayank____?t=JrKhdjjMInreMYByiiivVw&s=08",
+    "https://www.instagram.com/__mayank___agrawal__/",
+    "https://www.linkedin.com/in/mayank-agrawal-0ab974198/"
+  ]
+}
+</script>
 
         {% block extra_css %}
         {# Override this in templates to add extra stylesheets #}
